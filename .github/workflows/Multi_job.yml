@@ -1,0 +1,22 @@
+name: Multi-Job Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: echo "Building the project"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo "Running tests"
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint
+        run: echo "Linting the code"
